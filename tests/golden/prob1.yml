@@ -1,0 +1,224 @@
+in_source: |-
+  ; prob1
+  number:	WORD	0x3E7 ; 999
+  buf:	WORD	?
+  answer:	WORD	0x0
+  ; prob1
+  START:	LD	number
+  	DIV	#0x3
+  	ST	buf
+  	INC
+  	MUL	buf
+  	DIV	#0x2
+  	MUL	#0x3
+  	ST	answer
+
+  	LD	number
+  	DIV	#0x5
+  	ST	buf
+  	INC
+  	MUL 	buf
+  	DIV	#0x2
+  	MUL	#0x5
+  	ADD 	answer
+  	ST 	answer
+
+  	LD	number
+  	DIV	#0xF
+  	ST	buf
+  	INC
+  	MUL 	buf
+  	DIV	#0x2
+  	MUL	#0xF
+  	NOT		; neg
+  	INC
+  	ADD	answer
+  	ST 	answer
+  	HLT
+in_stdin: foo
+io_type: str
+out_log: |
+  DEBUG    root:machine.py:348 TICK:    0 PC:    3 AR:    0 AC:    0 Z_FLAG: 0  	{'opcode': 'ld', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:    6 PC:    4 AR:    0 AC:  999 Z_FLAG: 0  	{'opcode': 'div', 'arg': 3, 'arg_type': 'direct_load'} 
+  DEBUG    root:machine.py:353 TICK:   10 PC:    5 AR:    4 AC:  333 Z_FLAG: 0  	{'opcode': 'st', 'arg': 1, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   15 PC:    6 AR:    1 AC:  333 Z_FLAG: 0  	{'opcode': 'inc'}                
+  DEBUG    root:machine.py:353 TICK:   19 PC:    7 AR:    6 AC:  334 Z_FLAG: 0  	{'opcode': 'mul', 'arg': 1, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   24 PC:    8 AR:    1 AC: 111222 Z_FLAG: 0  	{'opcode': 'div', 'arg': 2, 'arg_type': 'direct_load'} 
+  DEBUG    root:machine.py:353 TICK:   28 PC:    9 AR:    8 AC: 55611 Z_FLAG: 0  	{'opcode': 'mul', 'arg': 3, 'arg_type': 'direct_load'} 
+  DEBUG    root:machine.py:353 TICK:   32 PC:   10 AR:    9 AC: 166833 Z_FLAG: 0  	{'opcode': 'st', 'arg': 2, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   37 PC:   11 AR:    2 AC: 166833 Z_FLAG: 0  	{'opcode': 'ld', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   43 PC:   12 AR:    0 AC:  999 Z_FLAG: 0  	{'opcode': 'div', 'arg': 5, 'arg_type': 'direct_load'} 
+  DEBUG    root:machine.py:353 TICK:   47 PC:   13 AR:   12 AC:  199 Z_FLAG: 0  	{'opcode': 'st', 'arg': 1, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   52 PC:   14 AR:    1 AC:  199 Z_FLAG: 0  	{'opcode': 'inc'}                
+  DEBUG    root:machine.py:353 TICK:   56 PC:   15 AR:   14 AC:  200 Z_FLAG: 0  	{'opcode': 'mul', 'arg': 1, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   61 PC:   16 AR:    1 AC: 39800 Z_FLAG: 0  	{'opcode': 'div', 'arg': 2, 'arg_type': 'direct_load'} 
+  DEBUG    root:machine.py:353 TICK:   65 PC:   17 AR:   16 AC: 19900 Z_FLAG: 0  	{'opcode': 'mul', 'arg': 5, 'arg_type': 'direct_load'} 
+  DEBUG    root:machine.py:353 TICK:   69 PC:   18 AR:   17 AC: 99500 Z_FLAG: 0  	{'opcode': 'add', 'arg': 2, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   74 PC:   19 AR:    2 AC: 266333 Z_FLAG: 0  	{'opcode': 'st', 'arg': 2, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   79 PC:   20 AR:    2 AC: 266333 Z_FLAG: 0  	{'opcode': 'ld', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   85 PC:   21 AR:    0 AC:  999 Z_FLAG: 0  	{'opcode': 'div', 'arg': 15, 'arg_type': 'direct_load'} 
+  DEBUG    root:machine.py:353 TICK:   89 PC:   22 AR:   21 AC:   66 Z_FLAG: 0  	{'opcode': 'st', 'arg': 1, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   94 PC:   23 AR:    1 AC:   66 Z_FLAG: 0  	{'opcode': 'inc'}                
+  DEBUG    root:machine.py:353 TICK:   98 PC:   24 AR:   23 AC:   67 Z_FLAG: 0  	{'opcode': 'mul', 'arg': 1, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  103 PC:   25 AR:    1 AC: 4422 Z_FLAG: 0  	{'opcode': 'div', 'arg': 2, 'arg_type': 'direct_load'} 
+  DEBUG    root:machine.py:353 TICK:  107 PC:   26 AR:   25 AC: 2211 Z_FLAG: 0  	{'opcode': 'mul', 'arg': 15, 'arg_type': 'direct_load'} 
+  DEBUG    root:machine.py:353 TICK:  111 PC:   27 AR:   26 AC: 33165 Z_FLAG: 0  	{'opcode': 'not'}                
+  DEBUG    root:machine.py:353 TICK:  115 PC:   28 AR:   27 AC: -33166 Z_FLAG: 0  	{'opcode': 'inc'}                
+  DEBUG    root:machine.py:353 TICK:  119 PC:   29 AR:   28 AC: -33165 Z_FLAG: 0  	{'opcode': 'add', 'arg': 2, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  124 PC:   30 AR:    2 AC: 233168 Z_FLAG: 0  	{'opcode': 'st', 'arg': 2, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  129 PC:   31 AR:    2 AC: 233168 Z_FLAG: 0  	{'opcode': 'hlt'}                
+  INFO     root:machine.py:361 output buffer: 
+  INFO     root:machine.py:371 instr_counter: 28
+  INFO     root:machine.py:372 ticks: 132
+out_stdout: |
+out_code: |-
+  {
+    "start": 3,
+    "code": [
+      {
+        "opcode": "word",
+        "arg": 999
+      },
+      {
+        "opcode": "word",
+        "arg": 0
+      },
+      {
+        "opcode": "word",
+        "arg": 0
+      },
+      {
+        "opcode": "ld",
+        "arg": 0,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "div",
+        "arg": 3,
+        "arg_type": "direct_load"
+      },
+      {
+        "opcode": "st",
+        "arg": 1,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "inc"
+      },
+      {
+        "opcode": "mul",
+        "arg": 1,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "div",
+        "arg": 2,
+        "arg_type": "direct_load"
+      },
+      {
+        "opcode": "mul",
+        "arg": 3,
+        "arg_type": "direct_load"
+      },
+      {
+        "opcode": "st",
+        "arg": 2,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "ld",
+        "arg": 0,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "div",
+        "arg": 5,
+        "arg_type": "direct_load"
+      },
+      {
+        "opcode": "st",
+        "arg": 1,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "inc"
+      },
+      {
+        "opcode": "mul",
+        "arg": 1,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "div",
+        "arg": 2,
+        "arg_type": "direct_load"
+      },
+      {
+        "opcode": "mul",
+        "arg": 5,
+        "arg_type": "direct_load"
+      },
+      {
+        "opcode": "add",
+        "arg": 2,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "st",
+        "arg": 2,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "ld",
+        "arg": 0,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "div",
+        "arg": 15,
+        "arg_type": "direct_load"
+      },
+      {
+        "opcode": "st",
+        "arg": 1,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "inc"
+      },
+      {
+        "opcode": "mul",
+        "arg": 1,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "div",
+        "arg": 2,
+        "arg_type": "direct_load"
+      },
+      {
+        "opcode": "mul",
+        "arg": 15,
+        "arg_type": "direct_load"
+      },
+      {
+        "opcode": "not"
+      },
+      {
+        "opcode": "inc"
+      },
+      {
+        "opcode": "add",
+        "arg": 2,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "st",
+        "arg": 2,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "hlt"
+      }
+    ]
+  }

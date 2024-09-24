@@ -1,0 +1,52 @@
+{
+  "start": 1,
+  "code": [
+    {
+      "opcode": "word",
+      "arg": 0
+    },
+    {
+      "opcode": "in",
+      "arg": 2
+    },
+    {
+      "opcode": "st",
+      "arg": 0,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "ld",
+      "arg": 0,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "jz",
+      "arg": 10,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "dec"
+    },
+    {
+      "opcode": "st",
+      "arg": 0,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "in",
+      "arg": 2
+    },
+    {
+      "opcode": "out",
+      "arg": 1
+    },
+    {
+      "opcode": "jmp",
+      "arg": 3,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "hlt"
+    }
+  ]
+}

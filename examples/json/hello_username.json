@@ -1,0 +1,339 @@
+{
+  "start": 0,
+  "code": [
+    {
+      "opcode": "cla"
+    },
+    {
+      "opcode": "st",
+      "arg": 48,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "ld",
+      "arg": 51,
+      "arg_type": "direct_load"
+    },
+    {
+      "opcode": "st",
+      "arg": 49,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "ld",
+      "arg": 48,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "cmp",
+      "arg": 50,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "jz",
+      "arg": 15,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "inc"
+    },
+    {
+      "opcode": "st",
+      "arg": 48,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "ld",
+      "arg": 49,
+      "arg_type": "relative_address"
+    },
+    {
+      "opcode": "out",
+      "arg": 1
+    },
+    {
+      "opcode": "ld",
+      "arg": 49,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "inc"
+    },
+    {
+      "opcode": "st",
+      "arg": 49,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "jmp",
+      "arg": 4,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "ld",
+      "arg": 70,
+      "arg_type": "direct_load"
+    },
+    {
+      "opcode": "add",
+      "arg": 69,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "st",
+      "arg": 49,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "in",
+      "arg": 2
+    },
+    {
+      "opcode": "st",
+      "arg": 48,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "add",
+      "arg": 69,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "st",
+      "arg": 69,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "ld",
+      "arg": 48,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "jz",
+      "arg": 32,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "dec"
+    },
+    {
+      "opcode": "st",
+      "arg": 48,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "in",
+      "arg": 2
+    },
+    {
+      "opcode": "st",
+      "arg": 49,
+      "arg_type": "relative_address"
+    },
+    {
+      "opcode": "ld",
+      "arg": 49,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "inc"
+    },
+    {
+      "opcode": "st",
+      "arg": 49,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "jmp",
+      "arg": 22,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "cla"
+    },
+    {
+      "opcode": "st",
+      "arg": 48,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "ld",
+      "arg": 70,
+      "arg_type": "direct_load"
+    },
+    {
+      "opcode": "st",
+      "arg": 49,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "ld",
+      "arg": 48,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "cmp",
+      "arg": 69,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "jz",
+      "arg": 47,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "inc"
+    },
+    {
+      "opcode": "st",
+      "arg": 48,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "ld",
+      "arg": 49,
+      "arg_type": "relative_address"
+    },
+    {
+      "opcode": "out",
+      "arg": 1
+    },
+    {
+      "opcode": "ld",
+      "arg": 49,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "inc"
+    },
+    {
+      "opcode": "st",
+      "arg": 49,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "jmp",
+      "arg": 36,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "hlt"
+    },
+    {
+      "opcode": "word",
+      "arg": 0
+    },
+    {
+      "opcode": "word",
+      "arg": 0
+    },
+    {
+      "opcode": "word",
+      "arg": 18
+    },
+    {
+      "opcode": "word",
+      "arg": 87
+    },
+    {
+      "opcode": "word",
+      "arg": 104
+    },
+    {
+      "opcode": "word",
+      "arg": 97
+    },
+    {
+      "opcode": "word",
+      "arg": 116
+    },
+    {
+      "opcode": "word",
+      "arg": 32
+    },
+    {
+      "opcode": "word",
+      "arg": 105
+    },
+    {
+      "opcode": "word",
+      "arg": 115
+    },
+    {
+      "opcode": "word",
+      "arg": 32
+    },
+    {
+      "opcode": "word",
+      "arg": 121
+    },
+    {
+      "opcode": "word",
+      "arg": 111
+    },
+    {
+      "opcode": "word",
+      "arg": 117
+    },
+    {
+      "opcode": "word",
+      "arg": 114
+    },
+    {
+      "opcode": "word",
+      "arg": 32
+    },
+    {
+      "opcode": "word",
+      "arg": 110
+    },
+    {
+      "opcode": "word",
+      "arg": 97
+    },
+    {
+      "opcode": "word",
+      "arg": 109
+    },
+    {
+      "opcode": "word",
+      "arg": 101
+    },
+    {
+      "opcode": "word",
+      "arg": 63
+    },
+    {
+      "opcode": "word",
+      "arg": 7
+    },
+    {
+      "opcode": "word",
+      "arg": 72
+    },
+    {
+      "opcode": "word",
+      "arg": 101
+    },
+    {
+      "opcode": "word",
+      "arg": 108
+    },
+    {
+      "opcode": "word",
+      "arg": 108
+    },
+    {
+      "opcode": "word",
+      "arg": 111
+    },
+    {
+      "opcode": "word",
+      "arg": 44
+    },
+    {
+      "opcode": "word",
+      "arg": 32
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "start": 16,
+  "code": [
+    {
+      "opcode": "word",
+      "arg": 13
+    },
+    {
+      "opcode": "word",
+      "arg": 72
+    },
+    {
+      "opcode": "word",
+      "arg": 101
+    },
+    {
+      "opcode": "word",
+      "arg": 108
+    },
+    {
+      "opcode": "word",
+      "arg": 108
+    },
+    {
+      "opcode": "word",
+      "arg": 111
+    },
+    {
+      "opcode": "word",
+      "arg": 44
+    },
+    {
+      "opcode": "word",
+      "arg": 32
+    },
+    {
+      "opcode": "word",
+      "arg": 87
+    },
+    {
+      "opcode": "word",
+      "arg": 111
+    },
+    {
+      "opcode": "word",
+      "arg": 114
+    },
+    {
+      "opcode": "word",
+      "arg": 108
+    },
+    {
+      "opcode": "word",
+      "arg": 100
+    },
+    {
+      "opcode": "word",
+      "arg": 33
+    },
+    {
+      "opcode": "word",
+      "arg": 0
+    },
+    {
+      "opcode": "word",
+      "arg": 0
+    },
+    {
+      "opcode": "cla"
+    },
+    {
+      "opcode": "st",
+      "arg": 14,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "ld",
+      "arg": 1,
+      "arg_type": "direct_load"
+    },
+    {
+      "opcode": "st",
+      "arg": 15,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "ld",
+      "arg": 14,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "inc"
+    },
+    {
+      "opcode": "cmp",
+      "arg": 0,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "jz",
+      "arg": 31,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "st",
+      "arg": 14,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "ld",
+      "arg": 15,
+      "arg_type": "relative_address"
+    },
+    {
+      "opcode": "out",
+      "arg": 1
+    },
+    {
+      "opcode": "ld",
+      "arg": 15,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "inc"
+    },
+    {
+      "opcode": "st",
+      "arg": 15,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "jmp",
+      "arg": 20,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "hlt"
+    }
+  ]
+}

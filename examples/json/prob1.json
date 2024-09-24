@@ -1,0 +1,150 @@
+{
+  "start": 3,
+  "code": [
+    {
+      "opcode": "word",
+      "arg": 999
+    },
+    {
+      "opcode": "word",
+      "arg": 0
+    },
+    {
+      "opcode": "word",
+      "arg": 0
+    },
+    {
+      "opcode": "ld",
+      "arg": 0,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "div",
+      "arg": 3,
+      "arg_type": "direct_load"
+    },
+    {
+      "opcode": "st",
+      "arg": 1,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "inc"
+    },
+    {
+      "opcode": "mul",
+      "arg": 1,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "div",
+      "arg": 2,
+      "arg_type": "direct_load"
+    },
+    {
+      "opcode": "mul",
+      "arg": 3,
+      "arg_type": "direct_load"
+    },
+    {
+      "opcode": "st",
+      "arg": 2,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "ld",
+      "arg": 0,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "div",
+      "arg": 5,
+      "arg_type": "direct_load"
+    },
+    {
+      "opcode": "st",
+      "arg": 1,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "inc"
+    },
+    {
+      "opcode": "mul",
+      "arg": 1,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "div",
+      "arg": 2,
+      "arg_type": "direct_load"
+    },
+    {
+      "opcode": "mul",
+      "arg": 5,
+      "arg_type": "direct_load"
+    },
+    {
+      "opcode": "add",
+      "arg": 2,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "st",
+      "arg": 2,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "ld",
+      "arg": 0,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "div",
+      "arg": 15,
+      "arg_type": "direct_load"
+    },
+    {
+      "opcode": "st",
+      "arg": 1,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "inc"
+    },
+    {
+      "opcode": "mul",
+      "arg": 1,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "div",
+      "arg": 2,
+      "arg_type": "direct_load"
+    },
+    {
+      "opcode": "mul",
+      "arg": 15,
+      "arg_type": "direct_load"
+    },
+    {
+      "opcode": "not"
+    },
+    {
+      "opcode": "inc"
+    },
+    {
+      "opcode": "add",
+      "arg": 2,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "st",
+      "arg": 2,
+      "arg_type": "direct_address"
+    },
+    {
+      "opcode": "hlt"
+    }
+  ]
+}

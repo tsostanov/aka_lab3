@@ -1,0 +1,123 @@
+in_source: |-
+  ; cat
+  cnt:	WORD	?
+
+  START:	IN	0x2
+  	ST	cnt
+
+  LOOP:	LD	cnt
+  	JZ	END
+  	DEC
+  	ST	cnt
+  	IN	0x2
+  	OUT	0x1
+  	JMP	LOOP
+
+  END:	HLT
+in_stdin: foobar
+io_type: str
+out_log: |
+  DEBUG    root:machine.py:348 TICK:    0 PC:    1 AR:    0 AC:    0 Z_FLAG: 0  	{'opcode': 'in', 'arg': 2}       
+  DEBUG    root:machine.py:353 TICK:    4 PC:    2 AR:    1 AC:    6 Z_FLAG: 0  	{'opcode': 'st', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:    9 PC:    3 AR:    0 AC:    6 Z_FLAG: 0  	{'opcode': 'ld', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   15 PC:    4 AR:    0 AC:    6 Z_FLAG: 0  	{'opcode': 'jz', 'arg': 10, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   19 PC:    5 AR:    4 AC:    6 Z_FLAG: 0  	{'opcode': 'dec'}                
+  DEBUG    root:machine.py:353 TICK:   23 PC:    6 AR:    5 AC:    5 Z_FLAG: 0  	{'opcode': 'st', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   28 PC:    7 AR:    0 AC:    5 Z_FLAG: 0  	{'opcode': 'in', 'arg': 2}       
+  DEBUG    root:machine.py:353 TICK:   32 PC:    8 AR:    7 AC:  102 Z_FLAG: 0  	{'opcode': 'out', 'arg': 1}      
+  DEBUG    root:machine.py:353 TICK:   36 PC:    9 AR:    8 AC:  102 Z_FLAG: 0  	{'opcode': 'jmp', 'arg': 3, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   40 PC:    3 AR:    9 AC:  102 Z_FLAG: 0  	{'opcode': 'ld', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   46 PC:    4 AR:    0 AC:    5 Z_FLAG: 0  	{'opcode': 'jz', 'arg': 10, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   50 PC:    5 AR:    4 AC:    5 Z_FLAG: 0  	{'opcode': 'dec'}                
+  DEBUG    root:machine.py:353 TICK:   54 PC:    6 AR:    5 AC:    4 Z_FLAG: 0  	{'opcode': 'st', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   59 PC:    7 AR:    0 AC:    4 Z_FLAG: 0  	{'opcode': 'in', 'arg': 2}       
+  DEBUG    root:machine.py:353 TICK:   63 PC:    8 AR:    7 AC:  111 Z_FLAG: 0  	{'opcode': 'out', 'arg': 1}      
+  DEBUG    root:machine.py:353 TICK:   67 PC:    9 AR:    8 AC:  111 Z_FLAG: 0  	{'opcode': 'jmp', 'arg': 3, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   71 PC:    3 AR:    9 AC:  111 Z_FLAG: 0  	{'opcode': 'ld', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   77 PC:    4 AR:    0 AC:    4 Z_FLAG: 0  	{'opcode': 'jz', 'arg': 10, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   81 PC:    5 AR:    4 AC:    4 Z_FLAG: 0  	{'opcode': 'dec'}                
+  DEBUG    root:machine.py:353 TICK:   85 PC:    6 AR:    5 AC:    3 Z_FLAG: 0  	{'opcode': 'st', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:   90 PC:    7 AR:    0 AC:    3 Z_FLAG: 0  	{'opcode': 'in', 'arg': 2}       
+  DEBUG    root:machine.py:353 TICK:   94 PC:    8 AR:    7 AC:  111 Z_FLAG: 0  	{'opcode': 'out', 'arg': 1}      
+  DEBUG    root:machine.py:353 TICK:   98 PC:    9 AR:    8 AC:  111 Z_FLAG: 0  	{'opcode': 'jmp', 'arg': 3, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  102 PC:    3 AR:    9 AC:  111 Z_FLAG: 0  	{'opcode': 'ld', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  108 PC:    4 AR:    0 AC:    3 Z_FLAG: 0  	{'opcode': 'jz', 'arg': 10, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  112 PC:    5 AR:    4 AC:    3 Z_FLAG: 0  	{'opcode': 'dec'}                
+  DEBUG    root:machine.py:353 TICK:  116 PC:    6 AR:    5 AC:    2 Z_FLAG: 0  	{'opcode': 'st', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  121 PC:    7 AR:    0 AC:    2 Z_FLAG: 0  	{'opcode': 'in', 'arg': 2}       
+  DEBUG    root:machine.py:353 TICK:  125 PC:    8 AR:    7 AC:   98 Z_FLAG: 0  	{'opcode': 'out', 'arg': 1}      
+  DEBUG    root:machine.py:353 TICK:  129 PC:    9 AR:    8 AC:   98 Z_FLAG: 0  	{'opcode': 'jmp', 'arg': 3, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  133 PC:    3 AR:    9 AC:   98 Z_FLAG: 0  	{'opcode': 'ld', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  139 PC:    4 AR:    0 AC:    2 Z_FLAG: 0  	{'opcode': 'jz', 'arg': 10, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  143 PC:    5 AR:    4 AC:    2 Z_FLAG: 0  	{'opcode': 'dec'}                
+  DEBUG    root:machine.py:353 TICK:  147 PC:    6 AR:    5 AC:    1 Z_FLAG: 0  	{'opcode': 'st', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  152 PC:    7 AR:    0 AC:    1 Z_FLAG: 0  	{'opcode': 'in', 'arg': 2}       
+  DEBUG    root:machine.py:353 TICK:  156 PC:    8 AR:    7 AC:   97 Z_FLAG: 0  	{'opcode': 'out', 'arg': 1}      
+  DEBUG    root:machine.py:353 TICK:  160 PC:    9 AR:    8 AC:   97 Z_FLAG: 0  	{'opcode': 'jmp', 'arg': 3, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  164 PC:    3 AR:    9 AC:   97 Z_FLAG: 0  	{'opcode': 'ld', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  170 PC:    4 AR:    0 AC:    1 Z_FLAG: 0  	{'opcode': 'jz', 'arg': 10, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  174 PC:    5 AR:    4 AC:    1 Z_FLAG: 0  	{'opcode': 'dec'}                
+  DEBUG    root:machine.py:353 TICK:  178 PC:    6 AR:    5 AC:    0 Z_FLAG: 1  	{'opcode': 'st', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  183 PC:    7 AR:    0 AC:    0 Z_FLAG: 1  	{'opcode': 'in', 'arg': 2}       
+  DEBUG    root:machine.py:353 TICK:  187 PC:    8 AR:    7 AC:  114 Z_FLAG: 1  	{'opcode': 'out', 'arg': 1}      
+  DEBUG    root:machine.py:353 TICK:  191 PC:    9 AR:    8 AC:  114 Z_FLAG: 0  	{'opcode': 'jmp', 'arg': 3, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  195 PC:    3 AR:    9 AC:  114 Z_FLAG: 0  	{'opcode': 'ld', 'arg': 0, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  201 PC:    4 AR:    0 AC:    0 Z_FLAG: 1  	{'opcode': 'jz', 'arg': 10, 'arg_type': 'direct_address'} 
+  DEBUG    root:machine.py:353 TICK:  205 PC:   10 AR:    4 AC:    0 Z_FLAG: 1  	{'opcode': 'hlt'}                
+  INFO     root:machine.py:361 output buffer: foobar
+  INFO     root:machine.py:371 instr_counter: 46
+  INFO     root:machine.py:372 ticks: 208
+out_stdout: |
+out_code: |-
+  {
+    "start": 1,
+    "code": [
+      {
+        "opcode": "word",
+        "arg": 0
+      },
+      {
+        "opcode": "in",
+        "arg": 2
+      },
+      {
+        "opcode": "st",
+        "arg": 0,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "ld",
+        "arg": 0,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "jz",
+        "arg": 10,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "dec"
+      },
+      {
+        "opcode": "st",
+        "arg": 0,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "in",
+        "arg": 2
+      },
+      {
+        "opcode": "out",
+        "arg": 1
+      },
+      {
+        "opcode": "jmp",
+        "arg": 3,
+        "arg_type": "direct_address"
+      },
+      {
+        "opcode": "hlt"
+      }
+    ]
+  }
